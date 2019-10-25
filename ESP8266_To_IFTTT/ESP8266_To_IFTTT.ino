@@ -15,8 +15,8 @@
 
 // Define program constants
 
-const char* myKey = "your key"; // your maker key here
-const char* ssid = "your ssid"; // your router ssid here
+string myKey = "your key"; // your maker key here
+string ssid = "your ssid"; // your router ssid here
 const char* password = "your password"; // your router password here
 
 // define program values
@@ -110,7 +110,7 @@ bool wifiConnected()
 
 bool DetectChange()
 {
-  int val;
+  int val=0;
   bool changed = false;
   for (int i = 0 ; i < NUMBER_OF_SENSORS ; i++)
   {
@@ -145,7 +145,7 @@ void debugln(String message)
 void debugln()
 {
 #ifdef SERIAL_DEBUG
-  Serial.println();
+  Serial.println("New Line");
 #endif
 }
 
